@@ -50,7 +50,7 @@ let rappers = {
         'netWorth': '180m',
         'bestSong': 'God\'s Plan'
     },
-    'Kendrick Lamar': {
+    'kendrick lamar': {
         'age': 33,
         'birthName': 'Kendrick Lamar Duckworth',
         'birthLocation': 'Compton, USA',

@@ -113,7 +113,7 @@ async function getRapName() {
     const data = await res.json();
 
     console.log(data);
-    document.querySelector("h2").innerText = data.birthName;
+    document.querySelector("#content").innerText = data.birthName;
   } catch (err) {
     console.log(err);
   }

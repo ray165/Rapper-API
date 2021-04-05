@@ -9,11 +9,11 @@
     height: auto;
     padding-left: 3%;
     padding-right: 3%;
-    max-width: 80%;
+    max-width: 500px;
     margin: auto auto;
 }
 
-#goBtn, #ready {
+#interBtn, #ready {
     /* width: 20%; */
     max-width: 50%;
     margin: auto auto;
@@ -23,18 +23,24 @@
     margin-top: 3vh;
 }
 
-#linkInput{
+#linkInput, #selectRapper, #rapBtn{
     max-width: 80%;
     margin: auto auto;
 }
 
-#block1, body {
-    background-image: url("/img/bg1.jpg");
-    background-size: contain;
+#block1 {
+    background-image: url("/img/bg2.png");
+    background-size: cover;
     /* background-repeat: no-repeat; */
 }
 
 h1 {
     color: blue;
     font-size: larger;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0;
 }
