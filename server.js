@@ -6,7 +6,7 @@ const PORT = 8000
 const fs = require("fs");
 app.use(cors())
 const myData = require('./private/data/rapperData');
-const rapperData = require('./private/data/rapperData');
+// const rapperData = require('./private/data/rapperData');
 
 app.use('/js', express.static('private/js'));
 app.use('/css', express.static('private/css'));
@@ -61,6 +61,17 @@ app.get('/api/rappers/:rapperName', (req, res)=>{
     //     res.json(rappers['unknown'])
     // }
 
+})
+
+app.get('/api/tableHTML', function (req, res){
+    res.setHeader('Content-Type', 'text/html');
+    dataList = myData.getHTML();
+    res.send(dataList);
+    // if(formatOfResponse == 'html-list') {
+
+
+
+    // } 
 })
 
 app.listen(PORT, ()=>{

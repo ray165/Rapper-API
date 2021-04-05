@@ -3,7 +3,7 @@
 
 document.querySelector("button").addEventListener("click", getRapName);
 
-// Search bar ----------- 
+// Search bar -----------
 // async function getRapName() {
 //   const rapName = document.querySelector("input").value;
 //   try {
@@ -106,16 +106,37 @@ for (x in rappers) {
 }
 
 async function getRapName() {
-    const rapName = document.querySelector("select").value;
-    try {
-      const res = await fetch(`http://localhost:8000/api/rappers/${rapName}`);
-      console.log(res);
-      const data = await res.json();
-  
-      console.log(data);
-      document.querySelector("h2").innerText = data.birthName;
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  const rapName = document.querySelector("select").value;
+  try {
+    const res = await fetch(`http://localhost:8000/api/rappers/${rapName}`);
+    console.log(res);
+    const data = await res.json();
 
+    console.log(data);
+    document.querySelector("h2").innerText = data.birthName;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+$(document).ready(function () {
+  $("#interBtn").click(function (e) {
+    // don't allow the anchor to visit the link
+    e.preventDefault();
+
+    $.ajax({
+      url: "/api/tableHTML",
+      dataType: "html",
+      type: "GET",
+      data: { format: "html-list" },
+      success: function (data) {
+        console.log("SUCCESS HTML:", data);
+        $("#content").html(data);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        $("#p1").text(jqXHR.statusText);
+        console.log("ERROR:", jqXHR, textStatus, errorThrown);
+      },
+    });
+  });
+});
