@@ -28,9 +28,9 @@
     margin: auto auto;
 }
 
-#block1 {
-    background-image: url("img/bg1.jpg");
-    /* background-size: contain; */
+#block1, body {
+    background-image: url("/img/bg1.jpg");
+    background-size: contain;
     /* background-repeat: no-repeat; */
 }
 

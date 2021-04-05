@@ -9,8 +9,8 @@ const myData = require('./private/data/rapperData');
 const rapperData = require('./private/data/rapperData');
 
 app.use('/js', express.static('private/js'));
-// app.use('/css', express.static('private/css'));
-// app.use('/img', express.static('private/img'));
+app.use('/css', express.static('private/css'));
+app.use('/img', express.static('private/img'));
 // app.use('/data', express.static('private/data'));
 
 let rappers = {
@@ -30,6 +30,7 @@ let rappers = {
         'birthLocation': 'unknown'
     }
 }
+
 
 
 
