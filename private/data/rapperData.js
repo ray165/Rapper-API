@@ -17,7 +17,7 @@ let rappers = {
         'bestSong': 'Cocoa Butter Kisses',
         'imgSrc': '/img/chance.png'
     },
-    'Eminem': {
+    'eminem': {
         'age': 48,
         'birthName': 'Marshall Bruce Mathers III',
         'birthLocation': 'Saint Joseph, USA',
