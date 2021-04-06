@@ -112,12 +112,64 @@ async function getRapName() {
     console.log(res);
     const data = await res.json();
 
-    console.log(data);
-    document.querySelector("#content").innerText = data.birthName;
+    console.log(data.imgSrc);
+    // Create the cards 
+    // document.querySelector("#content").innerText = data.birthName;
+    // make it nothing first!
+    document.querySelector("#content").innerText = "";
+    createCard(data);
+
   } catch (err) {
     console.log(err);
   }
 }
+
+// CARD CREATION 
+function createCard(data){
+    console.log("running");
+    var card = document.createElement("div");
+    card.className = "card mb-3";
+    card.style.maxWidth = '540px'; 
+    var row = document.createElement("div");
+    row.className = 'row g-0';
+    var colIMG = document.createElement("div");
+    colIMG.className = 'col-md-4';
+    var img = document.createElement('img')
+    img.src = data.imgSrc;
+    img.className = 'cardIMG';
+    // img.style.objectFit = 'cover';
+    var colText = document.createElement('div');
+    colText.className = 'col-md-8';
+    var cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+
+    var title = document.createElement('h5');
+    title.className = 'card-title';
+    title.innerHTML = data.birthName;
+
+    var list = document.createElement('ul');
+    list.className = 'card-text'; // not sure if this will work
+    list.style.listStyleType = 'none';
+    var age = document.createElement('li');
+    age.innerHTML = "Age: " + data.age;
+    var location = document.createElement('li');
+    location.innerHTML = "Birth Location: " + data.birthLocation;
+    var netWorth = document.createElement('li');
+    netWorth.innerHTML = "Net Worth: " + data.netWorth;
+    var bestSong = document.createElement('li');
+    bestSong.innerHTML = "Best Song: " + data.bestSong;
+    
+    // Appendings
+    list.append(age, location, netWorth, bestSong);
+    cardBody.append(title, list);
+    colText.append(cardBody);
+    colIMG.append(img);
+    row.append(colIMG, colText);
+    card.append(row);
+
+    document.querySelector("#content").append(card);
+}
+
 
 $(document).ready(function () {
   $("#interBtn").click(function (e) {

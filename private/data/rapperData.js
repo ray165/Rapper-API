@@ -6,70 +6,80 @@ let rappers = {
         'birthName': 'Shéyaa Bin Abraham-Joseph',
         'birthLocation': 'London, England',
         'netWorth': '12m',
-        'bestSong': 'X'
+        'bestSong': 'X',
+        'imgSrc': '/img/21sav.jpg'
     },
     'chance the rapper': {
         'age': 27,
         'birthName': 'Chancelor Johnathan Bennett',
         'birthLocation': 'Chicago, USA',
         'netWorth': '25m',
-        'bestSong': 'Cocoa Butter Kisses'
+        'bestSong': 'Cocoa Butter Kisses',
+        'imgSrc': '/img/chance.png'
     },
-    'unknown': {
-        'age': 'unknown',
-        'birthName': 'unknown',
-        'birthLocation': 'unknown',
-        'netWorth': 'unknown',
-        'bestSong': 'unknown'
+    'Eminem': {
+        'age': 48,
+        'birthName': 'Marshall Bruce Mathers III',
+        'birthLocation': 'Saint Joseph, USA',
+        'netWorth': '230m',
+        'bestSong': 'Slim Shady',
+        'imgSrc': '/img/eminem.jpg'
     },
     'tupac shakur': {
         'age': 25,
         'birthName': 'Tupac Amaru Shakur',
         'birthLocation': 'East Harlem, USA',
         'netWorth': '200k',
-        'bestSong': 'Hit Em Up'
+        'bestSong': 'Hit Em Up',
+        'imgSrc': '/img/tupac.jpg'
     },
     'ice cube': {
         'age': 51,
         'birthName': 'O\'Shea Jackson',
         'birthLocation': 'Crenshaw, USA',
         'netWorth': '160m',
-        'bestSong': 'No Vaseline'
+        'bestSong': 'No Vaseline',
+        'imgSrc': '/img/icecube.jpg'
     },
     'method man': {
         'age': 50,
         'birthName': 'Clifford Smith Jr.',
         'birthLocation': 'Hempstead, USA',
         'netWorth': '14m',
-        'bestSong': '7th Chamber'
+        'bestSong': '7th Chamber',
+        'imgSrc': '/img/method.jpg'
     },
     'drake': {
         'age': 34,
         'birthName': 'Aubrey Drake Graham',
         'birthLocation': 'Toronto, CAD',
         'netWorth': '180m',
-        'bestSong': 'God\'s Plan'
+        'bestSong': 'God\'s Plan',
+        'imgSrc': '/img/drake.jpg'
     },
     'kendrick lamar': {
         'age': 33,
         'birthName': 'Kendrick Lamar Duckworth',
         'birthLocation': 'Compton, USA',
         'netWorth': '75m',
-        'bestSong': 'Money Trees'
+        'bestSong': 'Money Trees',
+        'imgSrc': '/img/lamar.jpg'
     },
     'nosewall': {
         'age': 99,
         'birthName': 'Nolan Nordwall',
         'birthLocation': 'unknown',
         'netWorth': 'unknown',
-        'bestSong': 'Kool Aid Kid Remix'
+        'bestSong': 'Kool Aid Kid Remix',
+        'imgSrc': '/img/nolan.png'
     },
     'the notorious b.i.g.': {
         'age': 24,
         'birthName': 'Christopher George Latore Wallace',
         'birthLocation': 'Brooklyn, USA',
         'netWorth': '10m',
-        'bestSong': 'Big Poppa'
+        'bestSong': 'Big Poppa',
+        'imgSrc': '/img/biggie.jpg'
     },
 }
 
