@@ -101,18 +101,20 @@ let rappers = {
         'bestSong': 'Big Poppa',
         'imgSrc': '/img/biggie.jpg'
     },
-}
+};
 
 var select = document.getElementById("selectRapper");
 
 console.log(rappers);
 
-for (x in rappers) {
-  console.log(x);
-  var el = document.createElement("option");
-  el.text = x;
-  el.value = x;
-  select.appendChild(el);
+for (var x in rappers) {
+  if (rappers.hasOwnProperty(x)){
+    console.log(x);
+    var el = document.createElement("option");
+    el.text = x;
+    el.value = x;
+    select.appendChild(el);
+  }
 }
 
 async function getRapName() {
@@ -144,7 +146,7 @@ function createCard(data){
     row.className = 'row g-0';
     var colIMG = document.createElement("div");
     colIMG.className = 'col-md-4';
-    var img = document.createElement('img')
+    var img = document.createElement('img');
     img.src = data.imgSrc;
     img.className = 'cardIMG';
     // img.style.objectFit = 'cover';
